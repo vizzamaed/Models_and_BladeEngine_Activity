@@ -18,12 +18,11 @@ class BookFactory extends Factory
     {
         return [
             //
-            'id' => Int::random(10),
-            'isbn' => Int::random(10),
+            'isbn' => fake()->numberBetween($min = 100000, $max = 200000),
             'author' => fake()->name(),
-            'title' => fake()->unique(),
-            'description' => fake()->unique(),
-            'date_published' => date::random(),
+            'title' => fake()->sentence(),
+            'description' => fake()->paragraph(),
+            'date_published' => fake()->date(),
 
             
         ];
