@@ -9,3 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/books', [BookController::class, 'index']);
+
+Route::get('/test', function () {
+    return view('partials.header');
+});
